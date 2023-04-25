@@ -5,23 +5,27 @@ main {
 }
 
 #screen {
-	height: 60px;
-	background-color: gray;
+	height: 80px;
+	background-color: lightgray;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.5rem;
-	border-radius: 10px;
+	font-size: 1.8rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	margin-left: auto;
 }
 
 #btn-container {
-	margin-top: 25px;
+	padding: 10px 8px 10px 8px;
 	width: 300px;
-	height: 300px;
+	height: 380px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
+	background-color: black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #btn-container div {
@@ -30,45 +34,71 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid black;
 	border-radius: 50%;
 	font-size: 2rem;
+	color: white;
 }
 
 #btn-container div:hover {
 	cursor: pointer;
 }
 
-#plus,
-#minus,
-#x,
-#division {
-	grid-column-start: 4;
-}
-
 #plus {
 	grid-row-start: 1;
-	grid-row-end: 1;
+	grid-column-start: 4;
 }
 
 #minus {
 	grid-row-start: 2;
 	grid-row-end: 2;
+	grid-column-start: 4;
 }
 
 #x {
 	grid-row-start: 3;
 	grid-row-end: 3;
+	grid-column-start: 4;
+}
+
+#division {
+	grid-column-start: 4;
+	grid-row-start: 4;
+}
+
+#equals {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	grid-row-start: 5;
+	border-radius: 10px !important;
+	background-color: #0fff50;
+}
+
+#ac {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	border-radius: 10px !important;
+}
+
+#num-0 {
+	grid-column-end: 3;
 }
 
 .operator {
-	background-color: lightgray;
+	background-color: gray;
 }
 
 .operator:hover {
 	background-color: orange;
 }
 
+#ac:hover,
+#c:hover {
+	background-color: #dc143c;
+}
+
+.number {
+	background-color: black;
+}
 .number:hover {
-	background-color: lightcyan;
+	background-color: #7393b3;
 }
