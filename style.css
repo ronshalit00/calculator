@@ -1,12 +1,25 @@
-main {
-	display: flex;
-	align-items: center;
+:root {
+	--clr-light: #f1f6f9;
+	--clr-gray: #9ba4b5;
+	--clr-blue: #394867;
+	--clr-dark-blue: #212a3e;
+}
+
+body {
+	font-family: "Courier New", Courier, monospace;
+	margin: 0;
+}
+
+#page {
+	display: flex !important;
 	justify-content: center;
 }
 
 #screen {
+	margin-top: 5%;
 	height: 80px;
-	background-color: lightgray;
+	background-color: var(--clr-dark-blue);
+	color: var(--clr-light);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -14,18 +27,20 @@ main {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	margin-left: auto;
+	box-shadow: 10px 0 5px -2px #888;
 }
 
 #btn-container {
-	padding: 10px 8px 10px 8px;
+	padding: 15px 20px;
 	width: 300px;
 	height: 380px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
-	background-color: black;
+	background-color: var(--clr-gray);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	box-shadow: 10px 0 5px -2px #888;
 }
 
 #btn-container div {
@@ -36,11 +51,16 @@ main {
 	align-items: center;
 	border-radius: 50%;
 	font-size: 2rem;
-	color: white;
+	box-shadow: 3px 3px black;
 }
 
 #btn-container div:hover {
 	cursor: pointer;
+	box-shadow: 2px 2px black;
+}
+
+#btn-container div:active {
+	box-shadow: none;
 }
 
 #plus {
@@ -54,7 +74,7 @@ main {
 	grid-column-start: 4;
 }
 
-#x {
+#multiply {
 	grid-row-start: 3;
 	grid-row-end: 3;
 	grid-column-start: 4;
@@ -70,7 +90,7 @@ main {
 	grid-column-end: 5;
 	grid-row-start: 5;
 	border-radius: 10px !important;
-	background-color: #0fff50;
+	background-color: #f9d949;
 }
 
 #ac {
@@ -84,7 +104,8 @@ main {
 }
 
 .operator {
-	background-color: gray;
+	background-color: var(--clr-blue);
+	color: var(--clr-light);
 }
 
 .operator:hover {
@@ -97,8 +118,28 @@ main {
 }
 
 .number {
-	background-color: black;
+	background-color: var(--clr-light);
+	color: black;
 }
+
 .number:hover {
-	background-color: #7393b3;
+	background-color: #b9eddd;
+}
+
+footer {
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	text-align: center;
+}
+
+footer a {
+	color: orangered;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+	color: rgb(0, 101, 67);
 }
